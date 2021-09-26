@@ -1,0 +1,133 @@
+@import "../../../styles/settings.scss";
+
+.root {
+  .panelBar {
+    margin-bottom: 30px;
+    position: relative;
+
+    :global(.row) > * {
+      border-bottom: 4px solid $furniture-border-color;
+    }
+
+    .heading {
+      position: relative;
+      border-bottom: 4px solid $furniture-border-color;
+
+      h3 {
+        color: $primary;
+        text-transform: uppercase;
+        font-size: 20px;
+        line-height: 38px;
+        margin: 0;
+        letter-spacing: 1px;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 45px;
+        border-bottom: 4px solid $primary;
+      }
+    }
+
+    .menu {
+      text-align: center;
+      ul {
+        margin: 0 -0.5rem;
+        padding: 0;
+        list-style: none;
+        li {
+          display: inline-block;
+          margin: 0 0.5rem;
+          font-weight: 600;
+
+          a {
+            color: $furniture-menu-color;
+            position: relative;
+            text-decoration: none;
+            font-size: 18px;
+            display: block;
+
+            &.active,
+            &:hover {
+              &::before {
+                content: "";
+                position: absolute;
+                bottom: -4px;
+                left: 0;
+                width: 100%;
+                border-bottom: 4px solid $primary;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .dots {
+      position: absolute;
+      right: 0;
+      top: 0;
+
+      ul {
+        margin: 0;
+        padding: 0 0 0 1rem;
+        list-style: none;
+        background-color: $furniture-dots-bg;
+        transform: translateY(15px);
+
+        li {
+          display: inline-block;
+          margin-left: 0.5rem;
+
+          a {
+            display: block;
+            width: 13px;
+            height: 13px;
+            border-radius: 6px;
+            background-color: $furniture-border-color;
+            font-size: 0;
+
+            &.active,
+            &:hover {
+              background-color: $primary;
+            }
+          }
+        }
+      }
+    }
+  }
+  .compareBox {
+    position: sticky;
+    bottom: 0;
+  }
+}
+.fadeIn {
+  opacity: 1;
+  transition: opacity 1s;
+  -webkit-transition: opacity 1s;
+  -moz-transition: opacity 1s;
+  -ms-transition: opacity 1s;
+  -o-transition: opacity 1s;
+}
+  .fadeOut {
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+@media (max-width: 575px) {
+  .root {
+    .panelBar {
+      .dots {
+        position: relative;
+        text-align: center;
+
+        ul {
+          padding: 0;
+        }
+      }
+    }
+  }
+}

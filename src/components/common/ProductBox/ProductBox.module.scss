@@ -1,0 +1,114 @@
+@import "../../../styles/settings.scss";
+
+.root {
+  background-color: $productbox-bg;
+  border: 2px solid $productbox-border-color;
+  margin-bottom: 2rem;
+
+  .photo {
+    position: relative;
+    background: {
+      color: $productbox-photo-bg;
+      size: cover;
+      position: center;
+      repeat: no-repeat;
+    }
+    overflow: hidden;
+    align-items: flex-end;
+
+    .image {
+      width: 100%;
+      height: 100%;
+      -o-object-fit: cover;
+         object-fit: cover;
+    }
+
+    .sale {
+      position: absolute;
+      top: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: $productbox-sale-bg;
+      border-radius: 50%;
+      color: $productbox-sale-color;
+      padding: 30px 14px 5px 15px;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      -webkit-transform: translateX(-50%);
+      -moz-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      -o-transform: translateX(-50%);
+}
+
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      visibility: hidden;
+    }
+  }
+
+  .content {
+    text-align: center;
+    padding: 20px;
+
+    h5 {
+      color: $primary;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 1px;
+    }
+  }
+
+  .line {
+    margin: 0 10px;
+    border-bottom: 1px solid $productbox-color;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -1px;
+      left: 50%;
+      width: 30px;
+      border-bottom: 4px solid $primary;
+      transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+      -moz-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      -o-transform: translateX(-50%);
+}
+  }
+
+  .actions {
+    padding: 15px 10px 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .outlines .selected{
+    background-color: $primary;
+    border-color: white;
+    color: white;
+  }
+ .outlines .state:hover{
+    background-color: $primary;
+    border-color: $primary;
+  }
+  &:hover .buttons {
+      visibility: visible;
+  }
+  &:hover .price .priceBtn{
+    background-color: $primary;
+  }
+  .price_old {
+    font-style: italic;
+    text-align: right;
+    padding-right: 10px;
+    span {
+      text-decoration: none;
+      color: $primary;
+    }
+  }
+}

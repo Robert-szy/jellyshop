@@ -1,0 +1,123 @@
+//Variables
+
+// NOTE: DO NOT use the main color variables in files,
+//  use the variables assigned to the components below
+$white:	#ffffff;
+$liteGray:	#f4f5f7;
+$gray-1:	#e0e3ed;
+$gray-2:	#e2e2e2;
+$gray-3:	#e1e1e1;
+$gray-4:	#d8d8d8;
+$gray-5:	#b6b6b6;
+$gray-6:	#a9a9a9;
+$gray-7:	#434343;
+$gray-8:	#363636;
+$gray-9:	#292929;
+$darkGray:	#2a2a2a;
+$darkOrange:	#d58e32;
+$green: #79AE30;
+$red: #FF0000;
+$yellow: #e9e600;
+$blue: #0190d3;
+$pink: #f72fe4;
+$bright-green: #14d400;
+
+//end//
+
+$primary: $darkOrange;
+$text-color: $darkGray;
+$form-border-color: $gray-9;
+$component-bg:	$white;
+$icon-color:	$darkOrange;
+$social-color:	$darkOrange;
+
+$search-border-color:	$gray-9;
+$search-color:	$darkGray;
+
+$header-topbar-bg: $gray-7;
+$header-topbar-color: $white;
+$header-bg: $gray-8;
+
+$footer-claim-bg: $darkGray;
+$footer-bg: $gray-8;
+$footer-bar-bg:	$darkGray;
+$footer-copyright-color:	$gray-6;
+$footer-menuheader-color:	$white;
+$footer-menuwrapper-color:	$gray-6;
+$footer-social-color:	$gray-6;
+
+$button-bg:	$darkGray;
+$button-color: $white;
+
+$company-cartcount-color:	$gray-1;
+$company-cartbox-color: $white;
+$company-phone-color:	$gray-4;
+
+$feature-border-color:	$gray-5;
+$feature-dots-color:	$gray-3;
+$feature-bg:	$white;
+
+$furniture-border-color:	$gray-2;
+$furniture-menu-color:	$darkGray;
+$furniture-dots-bg: $white;
+
+$feedback-dots-bg: $gray-2;
+
+$menubar-bg:	$white;
+$menubar-border-color:	$darkOrange;
+$menubar-color:	$darkGray;
+$menubar-shadow-color:	$gray-6;
+
+$productbox-border-color:	$gray-3;
+$productbox-photo-bg:	$liteGray;
+$productbox-sale-bg:	$gray-9;
+$productbox-sale-color:	$white;
+$productbox-color:	$darkGray;
+$productbox-stars-color:	$darkGray;
+$productbox-customStars-color: $darkOrange;
+$productbox-bg:	$white;
+
+$product-popup-bg: $liteGray;
+$product-popup-border-color:$gray-5;
+
+$base-padding: 24px;
+
+$brand-border-color: $gray-7;
+
+$product-reviews-border: $gray-4;
+$product-search-category-color: $white;
+
+$compare-box-color: $white;
+$compare-button-text: $darkGray;
+
+$gallery-border: $gray-4;
+$gallery-active-bg: $liteGray;
+$gallery-white: $white;
+$gallery-label: $darkGray;
+$gallery-shadow: $gray-5;
+$gallery-button: $green;
+
+$input-bg: $darkGray;
+$input-checked: $darkGray;
+$input-after: $white;
+$input-hover: $gray-6;
+
+$cart-border-color: $gray-4;
+
+%hover-params {
+  transition: background-color 0.25s,
+    border-color 0.25s,
+    color 0.25s,
+    transform 0.25s,
+    opacity 0.25s;
+}
+
+$register-valid: $green;
+$register-invalid: $red;
+
+$filter-red: $red;
+$filter-black: $button-bg;
+$filter-blue: $blue;
+$filter-yellow: $yellow;
+$filter-pink: $pink;
+$filter-green: $bright-green;

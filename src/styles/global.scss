@@ -1,0 +1,23 @@
+@import "./settings.scss";
+
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
+
+$tablet-width: 768px;
+$desktop-width: 1200px;
+
+@mixin mobile {
+  @media (max-width: #{$tablet-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+
+*, *::before, *::after {
+	box-sizing: border-box;
+}
