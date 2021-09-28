@@ -4,7 +4,7 @@ const initialState = {
   categories: [
     { id: 'jelly', name: 'Galaretki' },
     { id: 'bars', name: 'Batoniki' },
-    { id: 'loli', name: 'Lizaki' },
+    { id: 'loli', name: 'Karmel' },
 
   ],
 
@@ -175,7 +175,7 @@ const initialState = {
       image: '/images/l1.jpg',
     },
     {
-      id: 'lizak-1',
+      id: 'lizak-2',
       name: 'Lizak 2',
       category: 'loli',
       price: 30,
@@ -183,7 +183,7 @@ const initialState = {
       image: '/images/l2.jpg',
     },
     {
-      id: 'lizak-1',
+      id: 'lizak-3',
       name: 'Lizak 3',
       category: 'loli',
       price: 30,
@@ -191,7 +191,7 @@ const initialState = {
       image: '/images/l3.jpg',
     },
     {
-      id: 'lizak-1',
+      id: 'lizak-4',
       name: 'Lizak 4',
       category: 'loli',
       price: 30,

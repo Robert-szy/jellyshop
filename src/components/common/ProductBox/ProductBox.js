@@ -7,6 +7,9 @@ import { faShoppingBasket } from '@fortawesome/free-solid-svg-icons';
 // import { faHeart } from '@fortawesome/free-regular-svg-icons';
 import Button from '../Button/Button';
 import { Link } from 'react-router-dom';
+// import ProductPage from '../../views/ProductPage/ProductPage';
+// import ProductPage from '../../views/ProductPage/ProductPage';
+// import ProductPage from '../../views/ProductPage/ProductPage';
 
 const ProductBox = ({
   name,
@@ -25,9 +28,11 @@ const ProductBox = ({
 }) => (
   <div className={styles.root}>
     <div className={styles.photo}>
-      <Link to={`/product/${name}`}>
+
+      <Link to={`/product/${id}`}>
         <img className={styles.image} src={image} alt={name} />
       </Link>
+
       {/* {promo && <div className={styles.sale}>{promo}</div>} */}
       <div className={styles.buttons}>
         {/* <Button noJump onClick={() => handlePopupClick(id)} variant='small'>
@@ -39,9 +44,6 @@ const ProductBox = ({
       </div>
     </div>
     <div className={styles.content}>
-      <Link to={`/product/${name}`}>
-        <h5>{name}</h5>
-      </Link>
       {/* <Stars id={id} customStars={customStars} stars={stars} /> */}
     </div>
     <div className={styles.line}></div>
@@ -69,7 +71,7 @@ const ProductBox = ({
       </div> */}
     </div>
     <div className={styles.price_old}>
-      Cena od:<span> PLN {price}</span>
+      Cena od:<span> {price}</span> złotych
     </div>
   </div>
 );
