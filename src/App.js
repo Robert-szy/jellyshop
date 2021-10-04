@@ -8,10 +8,9 @@ import './styles/global.scss';
 
 import MainLayout from './components/layout/MainLayout/MainLayoutContainer';
 import Homepage from './components/views/Homepage/Homepage';
-// import ProductList from './components/views/ProductList/ProductListContainer';
 import ProductPage from './components/views/ProductPage/ProductPageContainer';
 import Cart from './components/views/Cart/CartContainer';
-import Order from './components/views/Order/Order';
+import Order from './components/views/Order/OrderContainer';
 
 
 

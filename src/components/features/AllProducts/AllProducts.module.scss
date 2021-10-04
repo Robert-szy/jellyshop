@@ -1,6 +1,21 @@
 @import "../../../styles/settings.scss";
 
+
+.allproducts{
+  background-color: $body-color;
+}
+
+.banner {
+  text-align: center;
+  font-size: 50px;
+  padding: 50px;
+  color: $text-color;
+  background-color: $body-color;
+
+}
 .root {
+  background-color: $body-color;
+
   .panelBar {
     margin-bottom: 30px;
     position: relative;

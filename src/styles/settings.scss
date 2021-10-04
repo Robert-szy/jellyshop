@@ -1,7 +1,5 @@
 //Variables
 
-// NOTE: DO NOT use the main color variables in files,
-//  use the variables assigned to the components below
 $white:	#ffffff;
 $liteGray:	#f4f5f7;
 $gray-1:	#e0e3ed;
@@ -12,8 +10,7 @@ $gray-5:	#b6b6b6;
 $gray-6:	#a9a9a9;
 $gray-7:	#434343;
 $gray-8:	#363636;
-$gray-9:	#292929;
-$darkGray:	#2a2a2a;
+// $darkGray:	#2a2a2a;
 $darkOrange:	#d58e32;
 $green: #79AE30;
 $red: #FF0000;
@@ -22,10 +19,22 @@ $blue: #0190d3;
 $pink: #f72fe4;
 $bright-green: #14d400;
 
-//end//
+$white:	#ffffff;
+$gray-9:	#292929;
+$darkGray: #10150f;
+$mediumGreen: #afc0ab;
+$darkGreen: #20453d;
+$caramel: #F4F3E7;
+$darkCaramel: #e5dcc8;
 
-$primary: $darkOrange;
+//end//
+$body-color: $caramel;
+$product-background: $darkCaramel;
 $text-color: $darkGray;
+$primary: $darkGreen;
+$footer-bg: $mediumGreen;
+
+
 $form-border-color: $gray-9;
 $component-bg:	$white;
 $icon-color:	$darkOrange;
@@ -39,7 +48,6 @@ $header-topbar-color: $white;
 $header-bg: $gray-8;
 
 $footer-claim-bg: $darkGray;
-$footer-bg: $gray-8;
 $footer-bar-bg:	$darkGray;
 $footer-copyright-color:	$gray-6;
 $footer-menuheader-color:	$white;

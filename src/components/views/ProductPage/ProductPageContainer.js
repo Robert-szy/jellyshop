@@ -6,14 +6,13 @@ import { getAllCat } from '../../../redux/categoriesRedux.js';
 // import { openProductPopup } from '../../../redux/prodPopupRedux';
 // import { getScreenType, setScreenType } from '../../../redux/screenTypeRedux';
 import { getAll, getProduct } from '../../../redux/productsRedux.js';
-import { addProduct } from '../../../redux/cartRedux';
+import { addProduct, removeOneProduct, getAllCart } from '../../../redux/cartRedux.js';
 
 const mapStateToProps = (state, props) => ({
   categories: getAllCat(state),
-  // products: getNew(state),
   products: getAll(state),
   id: getProduct(state, props.match.params.id),
-  // getCompared: getCompared(state),
+  cart: getAllCart(state),
 });
 
 const mapDispatcherToProps = dispatcher => ({
@@ -24,6 +23,7 @@ const mapDispatcherToProps = dispatcher => ({
   // addToCompare: payload => dispatcher(addToCompare(payload)),
   // removeFromCompare: payload => dispatcher(removeFromCompare(payload)),
   addToCart: payload => dispatcher(addProduct(payload)),
+  removeOneFromCart: payload => dispatcher(removeOneProduct(payload)),
 });
 
 export default connect(mapStateToProps, mapDispatcherToProps)(ProductPage);

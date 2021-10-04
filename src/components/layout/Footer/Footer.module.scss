@@ -1,0 +1,115 @@
+@import "../../../styles/settings.scss";
+
+.root {
+  .footerMenu {
+    background-color: $footer-bg;
+    padding: 3rem 0;
+
+    .menuWrapper {
+      h6 {
+        color: $primary;
+        text-transform: uppercase;
+        margin: 0 0 1rem 0;
+      }
+
+      ul {
+        margin: 0 0 1.5rem 0;
+        padding: 0;
+        list-style: none;
+        li {
+          a {
+            font-size: 14px;
+            line-height: 30px;
+            color: $primary;
+
+            &:hover {
+              color: $primary;
+            }
+          }
+        }
+      }
+    }
+
+    .paymentMethods {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      li {
+        display: inline-block;
+      }
+    }
+  }
+
+  .bottomBar {
+    background-color: $primary;
+
+    :global(.container) > :global(.row) {
+      height: 95px;
+    }
+
+    .empty{
+      p{
+        margin: 0;
+        color: $primary;
+        font-size: 14px;
+        line-height: 26px;
+      }
+    }
+
+    .copyright {
+      p {
+        margin: 0;
+        color: $footer-bg;
+        font-size: 14px;
+        line-height: 26px;
+      }
+    }
+
+    .socialMedia {
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        li {
+          display: inline-block;
+          margin-left: 1rem;
+
+          a {
+            color: $footer-social-color;
+            text-decoration: none;
+
+            &:hover {
+              color: $primary;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .root {
+    .footerMenu {
+      .menuWrapper {
+        text-align: center;
+      }
+
+      .creditCards {
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .root {
+    .bottomBar {
+      .socialMedia {
+        text-align: center !important;
+      }
+    }
+  }
+}

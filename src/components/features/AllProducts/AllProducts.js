@@ -26,9 +26,9 @@ class AllProducts extends React.Component {
     }, 1000);
   }
 
-  handleAddClick = id => {
+  handleAddClick = (id, quantity) => {
     const { addToCart } = this.props;
-    addToCart(id);
+    addToCart(id, quantity);
   };
 
   selectActualScreenType = () => {
@@ -111,56 +111,56 @@ class AllProducts extends React.Component {
     }
 
     return (
-      <Swipeable leftAction={leftAction} rightAction={rightAction}>
-        <div className={styles.root}>
-          <div className='container'>
-            <div className={styles.panelBar}>
-              <div className='row no-gutters align-items-end'>
-                {/* <div className={'col-12 col-md-auto ' + styles.heading}>
-                  <h3>Nasze produkty</h3>
-                </div> */}
-                <div className={'col-auto col-md ' + styles.menu}>
-                  <ul>
-                    {categories.map(item => (
-                      <li key={item.id}>
-                        <Link
-                          to='/#'
-                          className={
-                            item.id === activeCategory ? styles.active : undefined
-                          }
-                          onClick={() => {
-                            this.handleCategoryChange(item.id);
-                          }}
-                        >
-                          {item.name}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div className={'col-12 col-sm-auto ' + styles.dots}>
-                  <ul>{dots}</ul>
+      <div className={styles.allproducts}>
+        <div className={styles.banner}>Galaretka naturalnie</div>
+        <Swipeable leftAction={leftAction} rightAction={rightAction}>
+          <div className={styles.root}>
+            <div className='container'>
+              <div className={styles.panelBar}>
+                <div className='row no-gutters align-items-end'>
+                  <div className={'col-auto col-md ' + styles.menu}>
+                    <ul>
+                      {categories.map(item => (
+                        <li key={item.id}>
+                          <Link
+                            to='/#'
+                            className={
+                              item.id === activeCategory ? styles.active : undefined
+                            }
+                            onClick={() => {
+                              this.handleCategoryChange(item.id);
+                            }}
+                          >
+                            {item.name}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className={'col-12 col-sm-auto ' + styles.dots}>
+                    <ul>{dots}</ul>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className={'row ' + activePageStyle}>
-              {categoryProducts
-                .slice(
-                  activePage * actualProductsOnPage,
-                  (activePage + 1) * actualProductsOnPage
-                )
-                .map(item => (
-                  <div key={item.id} className='col-6 col-md-4 col-lg-3'>
-                    <ProductBox
-                      {...item}
-                      handleAddClick={this.handleAddClick}
-                    />
-                  </div>
-                ))}
+              <div className={'row ' + activePageStyle}>
+                {categoryProducts
+                  .slice(
+                    activePage * actualProductsOnPage,
+                    (activePage + 1) * actualProductsOnPage
+                  )
+                  .map(item => (
+                    <div key={item.id} className='col-6 col-md-4 col-lg-3'>
+                      <ProductBox
+                        {...item}
+                        handleAddClick={this.handleAddClick}
+                      />
+                    </div>
+                  ))}
+              </div>
             </div>
           </div>
-        </div>
-      </Swipeable>
+        </Swipeable>
+      </div>
     );
   }
 }
@@ -187,6 +187,12 @@ AllProducts.propTypes = {
       // compare: PropTypes.bool,
     })
   ),
+  // cart: PropTypes.arrayOf(
+  //   PropTypes.shape({
+  //     id: PropTypes.string,
+  //     quantity: PropTypes.number,
+  //   })
+  // ),
   // openProductPopup: PropTypes.func,
   setScreenType: PropTypes.func,
   // addToFavorites: PropTypes.func,

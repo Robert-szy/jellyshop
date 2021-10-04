@@ -7,9 +7,7 @@ import { faShoppingBasket } from '@fortawesome/free-solid-svg-icons';
 // import { faHeart } from '@fortawesome/free-regular-svg-icons';
 import Button from '../Button/Button';
 import { Link } from 'react-router-dom';
-// import ProductPage from '../../views/ProductPage/ProductPage';
-// import ProductPage from '../../views/ProductPage/ProductPage';
-// import ProductPage from '../../views/ProductPage/ProductPage';
+
 
 const ProductBox = ({
   name,
@@ -19,7 +17,7 @@ const ProductBox = ({
   // customStars,
   image,
   id,
-  // favorite,
+  // quantity,
   // compare,
   // handlePopupClick,
   // handleFavoriteClick,
@@ -38,7 +36,7 @@ const ProductBox = ({
         {/* <Button noJump onClick={() => handlePopupClick(id)} variant='small'>
           Quick View
         </Button> */}
-        <Button onClick={() => handleAddClick(id)} variant='small'>
+        <Button onClick={() => handleAddClick(id, 1)} variant='small'>
           <FontAwesomeIcon icon={faShoppingBasket}></FontAwesomeIcon> DODAJ DO KOSZYKA
         </Button>
       </div>
@@ -86,7 +84,7 @@ ProductBox.propTypes = {
   image: PropTypes.node,
 
   id: PropTypes.string,
-  // handleFavoriteClick: PropTypes.func,
+  // quantity: PropTypes.number,
   // favorite: PropTypes.bool,
   // compare: PropTypes.bool,
   // handlePopupClick: PropTypes.func,
