@@ -70,7 +70,7 @@ class AllProducts extends React.Component {
     const productsPerPage = {
       [SIZE_TYPES.MOBILE]: 2,
       [SIZE_TYPES.TABLET]: 3,
-      [SIZE_TYPES.DESKTOP]: 8,
+      [SIZE_TYPES.DESKTOP]: 6,
     };
     const actualProductsOnPage = Math.min(
       productsPerPage[screenType],
@@ -112,7 +112,14 @@ class AllProducts extends React.Component {
 
     return (
       <div className={styles.allproducts}>
-        <div className={styles.banner}>Galaretka naturalnie</div>
+        <div className={styles.root}>
+          <div className='container'>
+            <div className={styles.banner}>
+              <img src='images/baner.jpg' alt='banner' />
+              <div className={styles.bannertext}>Galaretka naturalnie...</div>
+            </div>
+          </div>
+        </div>
         <Swipeable leftAction={leftAction} rightAction={rightAction}>
           <div className={styles.root}>
             <div className='container'>
@@ -149,7 +156,7 @@ class AllProducts extends React.Component {
                     (activePage + 1) * actualProductsOnPage
                   )
                   .map(item => (
-                    <div key={item.id} className='col-6 col-md-4 col-lg-3'>
+                    <div key={item.id} className='col-6 col-md-4 col-lg-4'>
                       <ProductBox
                         {...item}
                         handleAddClick={this.handleAddClick}

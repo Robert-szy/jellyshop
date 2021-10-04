@@ -104,7 +104,7 @@ const Footer = ({ children }) => (
         <div className='row align-items-center'>
           <div className='col-12 col-md-12 col-lg-4'></div>
           <div className={'col-12 col-sm-6 col-lg-4 text-center ' + styles.copyright}>
-            <p>©Copyright | All Rights Reserved</p>
+            {/* <p>©Copyright | All Rights Reserved</p> */}
           </div>
           <div className={'col-12 col-sm-6 col-lg-4 text-right ' + styles.socialMedia}>
             <ul>

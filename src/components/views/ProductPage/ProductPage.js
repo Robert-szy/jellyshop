@@ -37,11 +37,13 @@ const ProductPage = ({ products, categories, cart, addToCart, removeOneFromCart}
       <div className='container'>
         <div className='row'>
           <div className='col-lg-5'>
-            <img
-              className={styles.image}
-              src={productImage}
-              alt=''
-            />
+            <div className={styles.photo}>
+              <img
+                className={styles.image}
+                src={productImage}
+                alt=''
+              />
+            </div>
             <div className={styles.gallery}>
               <Button variant='outline' className={styles.arrow}>
                 <FontAwesomeIcon icon={faAngleLeft}>Left</FontAwesomeIcon>

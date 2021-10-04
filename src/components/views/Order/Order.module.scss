@@ -11,6 +11,8 @@ $tablet-width: 768px;
 .root {
   padding: $base-padding 0;
   margin: 30px;
+  background-color: $body-color;
+
 
   .top {
     display: flex;
@@ -252,6 +254,7 @@ $tablet-width: 768px;
         font-size: 15px;
         font-weight: bolder;
         color: $gray-7;
+        margin: 0;
       }
 
       .comment {
@@ -263,8 +266,8 @@ $tablet-width: 768px;
         display: flex;
         text-align: center;
         border: none;
-        margin-top: 5px;
-        margin-bottom: 5px;
+        padding-top: 5px;
+        padding-bottom: 5px;
       }
 
       .subtotal, .total {
@@ -285,6 +288,9 @@ $tablet-width: 768px;
         p {
           padding: 10px 0 10px 10px;
           color: $primary;
+          border-left: solid 1px #dee2e6;
+          margin-right: 20%;
+
         }
       }
 

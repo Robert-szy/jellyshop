@@ -18,7 +18,7 @@ $desktop-width: 1200px;
 
 .root {
   box-shadow: 2px 3.464px 6px rgba(1, 2, 2, 0.2);
-  background-color: $menubar-bg;
+  background-color: $body-color;
 
   :global(.container) > :global(.row) {
     height: 84px;
@@ -83,7 +83,6 @@ $desktop-width: 1200px;
       text-decoration: none;
       display: flex;
       align-items: center;
-      border-top: 4px solid $menubar-bg;
       font-weight: 500;
       letter-spacing: 1px;
       @extend %hover-params;

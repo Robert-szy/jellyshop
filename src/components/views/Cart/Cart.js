@@ -47,9 +47,11 @@ const Cart = props => {
                     </td>
                     <td className='align-middle flex-nowrap' datatitle='PRODUCT'>
                       <div className={styles.productContainer}>
+                        {/* <div className={styles.photo}> */}
                         <div className={styles.image}>
                           <img src={product.image} alt={product.name} />
                         </div>
+                        {/* </div> */}
                         <div className={styles.productName}>
                           {product.name}
                         </div>
@@ -97,7 +99,7 @@ const Cart = props => {
             </div>
             <Link to={`/order`} className={styles.checkout}>
               <Button className={styles.checkoutButton}>
-                PRZEJDŹ DO ZAMÓWIENIA
+                PRZEJDŹ DO PODSUMOWANIA
               </Button>
             </Link>
           </div>

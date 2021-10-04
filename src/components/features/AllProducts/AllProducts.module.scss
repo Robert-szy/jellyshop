@@ -3,30 +3,62 @@
 
 .allproducts{
   background-color: $body-color;
+  padding: $base-padding 0;
+  margin: 30px;
+  position: relative;
 }
 
 .banner {
-  text-align: center;
-  font-size: 50px;
-  padding: 50px;
-  color: $text-color;
-  background-color: $body-color;
+  position: relative;
+  background: {
+    color: $product-background;
+    size: cover;
+    position: center;
+    repeat: no-repeat;
+  }
+  overflow: hidden;
+  align-items: flex-end;
+  border-radius: 20px;
 
+  img {
+  width: 100%;
+  // padding: 40px;
+  border-radius: 20px;
+  }
+
+  .bannertext {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    font-family: Poppins;
+    padding: 50px;
+    color: $text-color;
+    background: none;
+  }
 }
+
+
 .root {
   background-color: $body-color;
+  position: relative;
+
+
 
   .panelBar {
     margin-bottom: 30px;
+    margin-top: 40px;
     position: relative;
 
     :global(.row) > * {
-      border-bottom: 4px solid $furniture-border-color;
+      border-bottom: 4px solid $product-background;
     }
 
     .heading {
       position: relative;
-      border-bottom: 4px solid $furniture-border-color;
+      border-bottom: 4px solid $primary;
 
       h3 {
         color: $primary;
@@ -48,7 +80,8 @@
     }
 
     .menu {
-      text-align: center;
+      text-align: left;
+      padding-left: 40px;
       ul {
         margin: 0 -0.5rem;
         padding: 0;
@@ -59,7 +92,7 @@
           font-weight: 600;
 
           a {
-            color: $furniture-menu-color;
+            color: $primary;
             position: relative;
             text-decoration: none;
             font-size: 18px;
@@ -84,14 +117,14 @@
     .dots {
       position: absolute;
       right: 0;
-      top: 0;
+      top: -5px;
 
       ul {
         margin: 0;
-        padding: 0 0 0 1rem;
+        padding: 0 1rem 0 1rem;
         list-style: none;
-        background-color: $furniture-dots-bg;
-        transform: translateY(15px);
+        background-color: $body-color;
+        transform: translateY(10px);
 
         li {
           display: inline-block;
@@ -102,7 +135,7 @@
             width: 13px;
             height: 13px;
             border-radius: 6px;
-            background-color: $furniture-border-color;
+            background-color: $product-background;
             font-size: 0;
 
             &.active,
