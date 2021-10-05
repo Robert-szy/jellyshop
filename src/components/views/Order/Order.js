@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Order.module.scss';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import {faTimes } from '@fortawesome/free-solid-svg-icons';
 import Button from '../../common/Button/Button';
 import { Link } from 'react-router-dom';
 
@@ -49,15 +47,9 @@ const Order = props => {
                     </td>
                     <td className='align-middle' datatitle='QUANTITY'>
                       <div className={styles.quantity}>
-                        {/* <Button onClick={() => removeOneFromCart(product.id)} className={styles.button1} variant='outline'>
-                          -
-                        </Button> */}
                         <div className={styles.number}>
                           {product.quantity}
                         </div>
-                        {/* <Button onClick={() => addToCart(product.id)} className={styles.button2} variant='outline'>
-                          +
-                        </Button> */}
                       </div>
                     </td>
                     <td className='align-middle' datatitle='TOTAL'>
@@ -81,14 +73,9 @@ const Order = props => {
         <div className={styles.summaryContainer}>
           <div className={styles.summary}>
             <h3>Uwagi</h3>
-            {/* <div className={styles.summaryContainer}> */}
-            {/* <div className={styles.summary}> */}
             <div className={styles.comment}>
               <p>{comment}</p>
             </div>
-            {/* </div> */}
-            {/* </div> */}
-
             <h3>Podaj swoje dane</h3>
             <input type='text' placeholder='Imię' className={styles.form} id='formName' required></input>
             <input type='email' placeholder='E-mail' className={styles.form} id='formEmail' required></input>

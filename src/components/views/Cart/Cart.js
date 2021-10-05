@@ -10,9 +10,6 @@ import { Link } from 'react-router-dom';
 const Cart = props => {
   const { cartProducts, removeProduct, addToCart, addCartComment, removeOneFromCart } = props;
 
-  // const comment = cartComment.cartComment;
-  // console.log('comment', comment);
-
   const [comment, setValue] = useState();
   console.log('comment', comment);
 
@@ -22,7 +19,6 @@ const Cart = props => {
     setValue({ comment: event.target.value });
   };
   console.log('comment1', comment);
-  // this.setState({cartComment: comment});
 
   let cartTotal = 0;
   if (cartProducts && cartProducts.length !== 0) {cartTotal = cartProducts[cartProducts.length-1].cartTotal;}
@@ -133,7 +129,6 @@ Cart.propTypes = {
   removeOneFromCart: PropTypes.func,
   handleChange: PropTypes.func,
   addCartComment: PropTypes.func,
-  cartComment: PropTypes.string,
 };
 
 export default Cart;

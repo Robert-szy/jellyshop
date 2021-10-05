@@ -6,7 +6,6 @@ import { getAllCart, getComment, clearCart } from '../../../redux/cartRedux';
 const getOrderProducts = (state) => {
   const orderProducts = getAllCart(state);
   let cartTotal = 0;
-  // const comment = getComment(state);
   return Object.keys(orderProducts).map(key => {
     const { id, name, price } = getProduct(state, key);
     cartTotal += price*orderProducts[key];
@@ -16,7 +15,6 @@ const getOrderProducts = (state) => {
 
 const getCartComment = (state) => {
   const cartComment = getComment (state);
-  console.log('cartcoment in ord container', cartComment);
   return cartComment;
 };
 

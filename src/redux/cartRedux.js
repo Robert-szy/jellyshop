@@ -38,12 +38,7 @@ export default function reducer(statePart = [], action = {}) {
       };
     }
     case ADD_COMMENT: {
-      // const comment = statePart.comment[action.payload] || 0;
-      console.log('comment payl', action.payload);
-      console.log('statepart', statePart.comment);
       statePart.comment = action.payload;
-      console.log('statepart2', statePart.comment);
-
       return {
         ...statePart,
         comment: {...statePart.comment},
