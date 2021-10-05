@@ -1,8 +1,12 @@
 import { connect } from 'react-redux';
 import Cart from './Cart';
 import { getProduct } from '../../../redux/productsRedux';
-import { getAllCart, removeProduct, clearCart, addProduct, removeOneProduct  } from '../../../redux/cartRedux';
+import { getAllCart, removeProduct, clearCart, addProduct, removeOneProduct, addComment, getComment  } from '../../../redux/cartRedux';
 
+const getCartComment = (state) => {
+  const cartComment = getComment (state);
+  return {cartComment};
+};
 const getCartProducts = (state) => {
   const cartProducts = getAllCart(state);
   let cartTotal = 0;
@@ -14,6 +18,7 @@ const getCartProducts = (state) => {
 };
 const mapStateToProps = (state) => ({
   cartProducts: getCartProducts(state),
+  cartComment: getCartComment(state),
 });
 
 const mapDispatcherToProps = dispatcher => ({
@@ -21,6 +26,7 @@ const mapDispatcherToProps = dispatcher => ({
   clearCart: () => dispatcher(clearCart()),
   addToCart: payload => dispatcher(addProduct(payload)),
   removeOneFromCart: payload => dispatcher(removeOneProduct(payload)),
+  addCartComment: payload => dispatcher(addComment(payload)),
 });
 
 export default connect(mapStateToProps, mapDispatcherToProps)(Cart);

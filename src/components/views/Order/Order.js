@@ -7,7 +7,12 @@ import Button from '../../common/Button/Button';
 import { Link } from 'react-router-dom';
 
 const Order = props => {
-  const {orderProducts, clearCart } = props;
+  const {orderProducts, cartComment, clearCart } = props;
+
+
+  const comment = cartComment.comment;
+  console.log('comment', comment);
+
   let orderTotal = 0;
   if (orderProducts && orderProducts.length !== 0) {orderTotal = orderProducts[orderProducts.length-1].cartTotal;}
 
@@ -76,7 +81,13 @@ const Order = props => {
         <div className={styles.summaryContainer}>
           <div className={styles.summary}>
             <h3>Uwagi</h3>
-            <textarea className={styles.comment} type="text" id="comment"></textarea>
+            {/* <div className={styles.summaryContainer}> */}
+            {/* <div className={styles.summary}> */}
+            <div className={styles.comment}>
+              <p>{comment}</p>
+            </div>
+            {/* </div> */}
+            {/* </div> */}
 
             <h3>Podaj swoje dane</h3>
             <input type='text' placeholder='Imię' className={styles.form} id='formName' required></input>
@@ -100,7 +111,7 @@ const Order = props => {
 Order.propTypes = {
   orderProducts: PropTypes.array,
   clearCart: PropTypes.func,
-  cartTotal: PropTypes.number,
+  cartComment: PropTypes.string,
 };
 
 export default Order;

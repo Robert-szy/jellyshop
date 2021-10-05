@@ -1,10 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import Stars from '../../features/Stars/StarsContainer';
 import styles from './ProductBox.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingBasket } from '@fortawesome/free-solid-svg-icons';
-// import { faHeart } from '@fortawesome/free-regular-svg-icons';
 import Button from '../Button/Button';
 import { Link } from 'react-router-dom';
 
@@ -12,16 +10,8 @@ import { Link } from 'react-router-dom';
 const ProductBox = ({
   name,
   price,
-  // promo,
-  // stars,
-  // customStars,
   image,
   id,
-  // quantity,
-  // compare,
-  // handlePopupClick,
-  // handleFavoriteClick,
-  // handleCompareClick,
   handleAddClick,
 }) => (
   <div className={styles.root}>
@@ -31,7 +21,6 @@ const ProductBox = ({
         <img className={styles.image} src={image} alt={name} />
       </Link>
 
-      {/* {promo && <div className={styles.sale}>{promo}</div>} */}
       <div className={styles.buttons}>
         {/* <Button noJump onClick={() => handlePopupClick(id)} variant='small'>
           Quick View
@@ -42,31 +31,11 @@ const ProductBox = ({
       </div>
     </div>
     <div className={styles.content}>
-      {/* <Stars id={id} customStars={customStars} stars={stars} /> */}
     </div>
     <div className={styles.line}></div>
     <div className={styles.actions}>
       <div className={styles.outlines}>
-        {/* <Button
-          className={favorite ? styles.selected : styles.state}
-          onClick={() => handleFavoriteClick(id, favorite)}
-          variant='outline'
-        >
-          <FontAwesomeIcon icon={faExchangeAlt}>Favorite</FontAwesomeIcon>
-        </Button>
-        <Button
-          className={compare ? styles.selected : styles.state}
-          onClick={() => handleCompareClick(id, compare)}
-          variant='outline'
-        >
-          <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
-        </Button> */}
       </div>
-      {/* <div className={styles.price}>
-        <Button className={styles.priceBtn} noHover variant='small'>
-          PLN {price}
-        </Button>
-      </div> */}
     </div>
     <div className={styles.price_old}>
       Cena od:<span> {price}</span> złotych
@@ -78,17 +47,8 @@ ProductBox.propTypes = {
   children: PropTypes.node,
   name: PropTypes.string,
   price: PropTypes.number,
-  // promo: PropTypes.string,
-  // stars: PropTypes.number,
-  // customStars: PropTypes.number,
   image: PropTypes.node,
-
   id: PropTypes.string,
-  // quantity: PropTypes.number,
-  // favorite: PropTypes.bool,
-  // compare: PropTypes.bool,
-  // handlePopupClick: PropTypes.func,
-  // handleCompareClick: PropTypes.func,
   handleAddClick: PropTypes.func,
 };
 

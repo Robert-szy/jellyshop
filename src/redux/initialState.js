@@ -202,6 +202,7 @@ const initialState = {
   ],
   cart: {
     products: {},
+    comment: ['Wpisz uwagi do zamówienia'],
   },
 
 };

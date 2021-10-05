@@ -1,5 +1,6 @@
 /* selectors */
 export const getAllCart = ({ cart }) => cart.products;
+export const getComment = ({cart}) => cart.comment;
 export const getCount = ({ cart }) =>
   Object.keys(cart.products).reduce((p, c) => p + cart.products[c], 0);
 
@@ -9,6 +10,8 @@ const createActionName = name => `app/${reducerName}/${name}`;
 
 /* action types */
 const ADD_PRODUCT = createActionName('ADD_PRODUCT');
+const ADD_COMMENT = createActionName('ADD_COMMENT');
+
 const REMOVE_ONE_PRODUCT = createActionName('REMOVE_ONE_PRODUCT');
 
 const REMOVE_PRODUCT = createActionName('REMOVE_PRODUCT');
@@ -17,6 +20,8 @@ const CLEAR_CART = createActionName('CLEAR_CART');
 /* action creators */
 export const addProduct = payload => ({ payload, type: ADD_PRODUCT });
 export const removeOneProduct = payload => ({ payload, type: REMOVE_ONE_PRODUCT });
+export const addComment = payload => ({ payload, type: ADD_COMMENT });
+
 
 export const removeProduct = payload => ({ payload, type: REMOVE_PRODUCT });
 export const clearCart = payload => ({ payload, type: CLEAR_CART });
@@ -29,6 +34,19 @@ export default function reducer(statePart = [], action = {}) {
       return {
         ...statePart,
         products: { ...statePart.products, [action.payload]: quantity + 1 },
+
+      };
+    }
+    case ADD_COMMENT: {
+      // const comment = statePart.comment[action.payload] || 0;
+      console.log('comment payl', action.payload);
+      console.log('statepart', statePart.comment);
+      statePart.comment = action.payload;
+      console.log('statepart2', statePart.comment);
+
+      return {
+        ...statePart,
+        comment: {...statePart.comment},
 
       };
     }

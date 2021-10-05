@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import styles from './Cart.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -6,10 +6,28 @@ import {faTimes } from '@fortawesome/free-solid-svg-icons';
 import Button from '../../common/Button/Button';
 import { Link } from 'react-router-dom';
 
+
 const Cart = props => {
-  const { cartProducts, removeProduct, addToCart, removeOneFromCart } = props;
+  const { cartProducts, removeProduct, addToCart, addCartComment, removeOneFromCart } = props;
+
+  // const comment = cartComment.cartComment;
+  // console.log('comment', comment);
+
+  const [comment, setValue] = useState();
+  console.log('comment', comment);
+
+  const handleChange = (event) => {
+    event.preventDefault();
+    console.log('event', event);
+    setValue({ comment: event.target.value });
+  };
+  console.log('comment1', comment);
+  // this.setState({cartComment: comment});
+
   let cartTotal = 0;
   if (cartProducts && cartProducts.length !== 0) {cartTotal = cartProducts[cartProducts.length-1].cartTotal;}
+
+
 
   return (
     <div className={styles.root}>
@@ -47,11 +65,9 @@ const Cart = props => {
                     </td>
                     <td className='align-middle flex-nowrap' datatitle='PRODUCT'>
                       <div className={styles.productContainer}>
-                        {/* <div className={styles.photo}> */}
                         <div className={styles.image}>
                           <img src={product.image} alt={product.name} />
                         </div>
-                        {/* </div> */}
                         <div className={styles.productName}>
                           {product.name}
                         </div>
@@ -86,7 +102,7 @@ const Cart = props => {
           <div className={styles.summary}>
             <h3>Pozostaw komentarz</h3>
 
-            <textarea className={styles.comment} type="text" id="comment"></textarea>
+            <textarea className={styles.comment} type="text" id="comment" rows={5} placeholder='Tutaj wpisz uwagi do zamówienia' onChange={handleChange}></textarea>
 
           </div>
         </div>
@@ -98,7 +114,7 @@ const Cart = props => {
               <p>PLN{cartTotal}</p>
             </div>
             <Link to={`/order`} className={styles.checkout}>
-              <Button className={styles.checkoutButton}>
+              <Button onClick={()=>addCartComment(comment)} className={styles.checkoutButton}>
                 PRZEJDŹ DO PODSUMOWANIA
               </Button>
             </Link>
@@ -115,6 +131,9 @@ Cart.propTypes = {
   clearCart: PropTypes.func,
   addToCart: PropTypes.func,
   removeOneFromCart: PropTypes.func,
+  handleChange: PropTypes.func,
+  addCartComment: PropTypes.func,
+  cartComment: PropTypes.string,
 };
 
 export default Cart;
