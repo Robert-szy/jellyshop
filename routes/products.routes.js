@@ -5,7 +5,6 @@ const products = require('../controllers/products.controller');
 
 // GET request for all products.
 router.get('/', products.loadAll);
-console.log('product from prod routes', products.loadAll );
 
 // router.put('/products/:id', products.xxx);
 
