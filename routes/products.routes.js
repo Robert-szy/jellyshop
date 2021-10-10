@@ -7,8 +7,6 @@ const products = require('../controllers/products.controller');
 router.get('/', products.loadAll);
 console.log('product from prod routes', products.loadAll );
 
-
-// router.post('/products', products.add);
 // router.put('/products/:id', products.xxx);
 
 module.exports = router;
