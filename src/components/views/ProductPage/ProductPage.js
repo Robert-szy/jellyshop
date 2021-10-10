@@ -79,12 +79,13 @@ const ProductPage = ({ products, categories, cart, addToCart, removeOneFromCart}
                 </Button>
               </div>
               <div className={styles.quantity}>
-                <p>Wybrana ilość:  {quantity}</p>
-                <Button onClick={() => addToCart(id)} variant='outline' className={styles.state}>
-                  <FontAwesomeIcon icon={faPlus}>Dodaj jeden</FontAwesomeIcon>
-                </Button>
+                <p>Wybrana ilość:   </p>
                 <Button onClick={() => removeOneFromCart(id)} variant='outline' className={styles.state}>
                   <FontAwesomeIcon icon={faMinus}>Usuń jeden</FontAwesomeIcon>
+                </Button>
+                <p>{quantity}</p>
+                <Button onClick={() => addToCart(id)} variant='outline' className={styles.state}>
+                  <FontAwesomeIcon icon={faPlus}>Dodaj jeden</FontAwesomeIcon>
                 </Button>
               </div>
             </div>

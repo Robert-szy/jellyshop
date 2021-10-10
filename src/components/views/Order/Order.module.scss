@@ -89,11 +89,6 @@ $tablet-width: 768px;
         }
 
         .product {
-          // display: flex;
-          // align-items: center;
-          // padding: 20px;
-          // font-size: 14px;
-          // color: $gray-7;
           text-align: left;
 
           @include mobile {
@@ -301,29 +296,6 @@ $tablet-width: 768px;
 
         }
       }
-
-      // .comment {
-      //   margin: 0 30px;
-      //   height: 64px;
-      //   display: flex;
-      //   align-items: center;
-      //   justify-content: space-around;
-      //   border-bottom: solid 1px #dee2e6;
-
-      //   h5, p {
-      //     font-size: 14px;
-      //     margin-bottom: 0;
-      //     color: $gray-7;
-      //     min-width: 70px;
-      //   }
-
-      //   p {
-      //     padding: 10px 0 10px 10px;
-      //     color: $primary;
-      //     margin-right: 20%;
-
-      //   }
-      // }
 
       .checkout {
         margin: 10px 25px;

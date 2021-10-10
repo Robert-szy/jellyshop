@@ -90,11 +90,6 @@ $tablet-width: 768px;
         }
 
         .product {
-          // display: flex;
-          // align-items: center;
-          // padding: 20px;
-          // font-size: 14px;
-          // color: $gray-7;
           text-align: left;
 
           @include mobile {
