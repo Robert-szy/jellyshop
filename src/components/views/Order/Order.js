@@ -9,7 +9,6 @@ const Order = props => {
 
 
   const comment = cartComment.comment;
-  console.log('comment', comment);
 
   let orderTotal = 0;
   if (orderProducts && orderProducts.length !== 0) {orderTotal = orderProducts[orderProducts.length-1].cartTotal;}

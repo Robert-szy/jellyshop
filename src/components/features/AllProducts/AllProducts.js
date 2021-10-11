@@ -187,28 +187,11 @@ AllProducts.propTypes = {
       name: PropTypes.string,
       category: PropTypes.string,
       price: PropTypes.number,
-      // stars: PropTypes.number,
-      // promo: PropTypes.string,
       newProduct: PropTypes.bool,
-      // favorite: PropTypes.bool,
-      // compare: PropTypes.bool,
     })
   ),
-  // cart: PropTypes.arrayOf(
-  //   PropTypes.shape({
-  //     id: PropTypes.string,
-  //     quantity: PropTypes.number,
-  //   })
-  // ),
-  // openProductPopup: PropTypes.func,
   setScreenType: PropTypes.func,
-  // addToFavorites: PropTypes.func,
-  // removeFromFavorites: PropTypes.func,
   maxProductsOnPage: PropTypes.number,
-  // addToCompare: PropTypes.func,
-  // removeFromCompare: PropTypes.func,
-  // handleCompareClick: PropTypes.func,
-  // getCompared: PropTypes.array,
   addToCart: PropTypes.func,
 };
 

@@ -11,14 +11,11 @@ const Cart = props => {
   const { cartProducts, removeProduct, addToCart, addCartComment, removeOneFromCart } = props;
 
   const [comment, setValue] = useState();
-  console.log('comment', comment);
 
   const handleChange = (event) => {
     event.preventDefault();
-    console.log('event', event);
     setValue({ comment: event.target.value });
   };
-  console.log('comment1', comment);
 
   let cartTotal = 0;
   if (cartProducts && cartProducts.length !== 0) {cartTotal = cartProducts[cartProducts.length-1].cartTotal;}
